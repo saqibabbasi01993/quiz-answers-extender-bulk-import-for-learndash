@@ -3,7 +3,6 @@
 [![WordPress Plugin Version](https://img.shields.io/wordpress/plugin/v/quiz-answers-extender-bulk-import-for-learndash?label=version)](https://wordpress.org/plugins/quiz-answers-extender-bulk-import-for-learndash/)
 [![Rating](https://img.shields.io/wordpress/plugin/rating/quiz-answers-extender-bulk-import-for-learndash)](https://wordpress.org/plugins/quiz-answers-extender-bulk-import-for-learndash/#reviews)
 [![Downloads](https://img.shields.io/wordpress/plugin/dt/quiz-answers-extender-bulk-import-for-learndash)](https://wordpress.org/plugins/quiz-answers-extender-bulk-import-for-learndash/advanced/)
-[![Active Installs](https://img.shields.io/wordpress/plugin/installs/quiz-answers-extender-bulk-import-for-learndash)](https://wordpress.org/plugins/quiz-answers-extender-bulk-import-for-learndash/)
 [![Requires WP](https://img.shields.io/wordpress/plugin/wp-version/quiz-answers-extender-bulk-import-for-learndash)](https://wordpress.org/plugins/quiz-answers-extender-bulk-import-for-learndash/)
 [![Requires PHP](https://img.shields.io/wordpress/plugin/required-php/quiz-answers-extender-bulk-import-for-learndash)](https://wordpress.org/plugins/quiz-answers-extender-bulk-import-for-learndash/)
 [![License: GPL v2+](https://img.shields.io/badge/License-GPLv2%2B-blue.svg)](LICENSE)

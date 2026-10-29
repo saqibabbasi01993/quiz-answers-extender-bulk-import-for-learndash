@@ -1,0 +1,146 @@
+/*
+ * Quiz Answers Extender & Bulk Import for LearnDash – results review.
+ * The explanation lives inside the answer card (<label>), below the answer text,
+ * separated by a hairline divider, with a heading that reflects the answer state
+ * (LearnDash already shows its own correct/incorrect icons).
+ */
+
+.wpProQuiz_content {
+	--ldae-text: #4b5563;
+	--ldae-muted: #6b7280;
+	--ldae-divider: rgba(17, 24, 39, 0.1);
+	--ldae-neutral-fg: #475569;
+	--ldae-correct-fg: #157f3b;
+	--ldae-incorrect-fg: #b42318;
+}
+
+/* Let the card wrap so the explanation drops onto its own full-width row. */
+.wpProQuiz_content .wpProQuiz_questionListItem label.ldae-has-explanation,
+.wpProQuiz_content .wpProQuiz_questionListItem label.ldae-is-loading {
+	flex-wrap: wrap;
+	height: auto;
+	min-height: 0;
+	white-space: normal;
+}
+
+.wpProQuiz_content .ldae-explanation {
+	order: 99;
+	box-sizing: border-box;
+	display: block;
+	flex: 0 0 100%;
+	width: 100%;
+	margin: 14px 0 2px;
+	padding: 12px 0 0;
+	border-top: 1px solid var(--ldae-divider);
+	color: var(--ldae-text);
+	font-size: 0.9em;
+	font-weight: 400;
+	line-height: 1.6;
+	text-align: left;
+	text-transform: none;
+	letter-spacing: normal;
+	cursor: default;
+	animation: ldae-reveal 0.25s ease-out both;
+}
+
+
+
+.wpProQuiz_content .ldae-explanation__body {
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+.wpProQuiz_content .ldae-explanation__label {
+	display: block;
+	margin-bottom: 2px;
+	color: var(--ldae-neutral-fg);
+	font-size: 0.72rem;
+	font-style: normal;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	line-height: 1.4;
+	text-transform: uppercase;
+}
+
+.wpProQuiz_content .ldae-explanation__text {
+	color: var(--ldae-text);
+	font-style: italic;
+	overflow-wrap: anywhere;
+}
+
+.wpProQuiz_content .ldae-explanation__text a {
+	color: inherit;
+	text-decoration: underline;
+	text-underline-offset: 2px;
+}
+
+/* Correct answer */
+.wpProQuiz_content .ldae-explanation--correct {
+	border-top-color: rgba(21, 127, 59, 0.22);
+}
+.wpProQuiz_content .ldae-explanation--correct .ldae-explanation__label {
+	color: var(--ldae-correct-fg);
+}
+
+/* The student's wrong choice */
+.wpProQuiz_content .ldae-explanation--incorrect {
+	border-top-color: rgba(180, 35, 24, 0.2);
+}
+.wpProQuiz_content .ldae-explanation--incorrect .ldae-explanation__label {
+	color: var(--ldae-incorrect-fg);
+}
+
+/* Loading placeholder shown while explanations are fetched */
+.wpProQuiz_content .ldae-loading {
+	order: 99;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	flex: 0 0 100%;
+	width: 100%;
+	margin: 14px 0 2px;
+	padding: 12px 0 0;
+	border-top: 1px solid var(--ldae-divider);
+	color: var(--ldae-muted);
+	font-size: 0.85em;
+	font-style: italic;
+	font-weight: 400;
+	line-height: 1.4;
+	text-align: left;
+	text-transform: none;
+	letter-spacing: normal;
+	cursor: default;
+}
+
+.wpProQuiz_content .ldae-loading__spinner {
+	flex: 0 0 auto;
+	width: 14px;
+	height: 14px;
+	border: 2px solid var(--ldae-divider);
+	border-top-color: var(--ldae-muted);
+	border-radius: 50%;
+	animation: ldae-spin 0.7s linear infinite;
+}
+
+@keyframes ldae-spin {
+	to { transform: rotate(360deg); }
+}
+
+@media (max-width: 600px) {
+	.wpProQuiz_content .ldae-explanation {
+		margin-top: 12px;
+		padding-top: 10px;
+		font-size: 0.88em;
+	}
+}
+
+@keyframes ldae-reveal {
+	from { opacity: 0; transform: translateY(-3px); }
+	to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.wpProQuiz_content .ldae-explanation { animation: none; }
+	.wpProQuiz_content .ldae-loading__spinner { animation-duration: 1.5s; }
+}

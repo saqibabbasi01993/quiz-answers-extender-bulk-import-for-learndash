@@ -1,0 +1,49 @@
+/* Question editor */
+.ldae-explanation-field {
+	margin: 8px 0 4px;
+	padding: 8px 10px;
+	background: #f6f7f7;
+	border-left: 3px solid #72aee6;
+}
+.ldae-explanation-field label {
+	display: block;
+	margin-bottom: 4px;
+	font-weight: 600;
+}
+.ldae-explanation-field textarea {
+	width: 100%;
+	font-style: italic;
+	resize: vertical;
+}
+
+/* Quiz Builder panel */
+.ldae-builder { margin: 6px 0 8px; cursor: auto; }
+.ldae-builder__panel {
+	margin-top: 6px;
+	padding: 10px 12px;
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-left: 3px solid #72aee6;
+}
+.ldae-builder__answer { margin-bottom: 10px; }
+.ldae-builder__answer-label { display: block; margin-bottom: 3px; font-weight: 600; }
+.ldae-builder__correct { margin-left: 6px; color: #008a20; }
+.ldae-builder__input { width: 100%; font-style: italic; resize: vertical; }
+.ldae-builder__actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.ldae-builder__status.is-success { color: #008a20; }
+.ldae-builder__status.is-error,
+.ldae-builder__error { color: #d63638; }
+
+/* Importer */
+.ldae-import .ldae-import__columns,
+.ldae-import .ldae-import__report { max-width: 900px; }
+.ldae-import h3 { margin-top: 1.5em; }
+
+/* Inline field inside the "Options | Answer" table layout */
+.ldae-explanation-field { clear: both; }
+
+/* Fallback meta box */
+#ldae-fallback .ldae-fallback__row { margin-bottom: 12px; }
+#ldae-fallback label { display: block; margin-bottom: 4px; }
+#ldae-fallback textarea { font-style: italic; }
+.ldae-fallback__correct { color: #008a20; font-weight: 600; }
